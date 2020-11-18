@@ -50,27 +50,8 @@ function plugin_init_estimation() {
         Plugin::registerClass($class);
    }
 
-
-
    $PLUGIN_HOOKS['csrf_compliant']['estimation'] = true;
    $PLUGIN_HOOKS['config_page']['estimation'] = 'front/configs.php';
-//
-//   $PLUGIN_HOOKS['menu_toadd']['estimation'] = ['tools' => PluginEstimationEstimation::class];
-//   $PLUGIN_HOOKS['menu_entry']['estimation'] = 'front/estimation.php';
-//   $PLUGIN_HOOKS["helpdesk_menu_entry"]['estimation'] = true;
-
-   if(Session::haveRightsOr('plugin_estimation', [CREATE, READ])) {
-
-
-
-   }
-//
-//    $_SESSION['glpimenu']['tools']['types'][] = PluginEstimationEstimation::class;
-//    $_SESSION['glpimenu']['tools']['content']['pluginestimationmenu'] = [
-//        'title' => 'Оценка качества',
-//        'page' => '/plugins/estimation/front/estimation.php'
-//    ];
-
 }
 
 
