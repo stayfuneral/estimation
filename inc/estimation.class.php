@@ -184,7 +184,7 @@ class PluginEstimationEstimation extends CommonDBTM
                 'id' => $i++,
                 'table' => $table,
                 'field' => $field,
-                'name' => $name
+                'name' => $name,
             ];
 
             switch ($field) {
