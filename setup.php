@@ -52,6 +52,7 @@ function plugin_init_estimation() {
 
    $PLUGIN_HOOKS['csrf_compliant']['estimation'] = true;
    $PLUGIN_HOOKS['config_page']['estimation'] = 'front/configs.php';
+    $PLUGIN_HOOKS['use_massive_action']['estimation'] = true;
 }
 
 
