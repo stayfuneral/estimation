@@ -4,17 +4,16 @@ window.onload = function () {
         data: {
             estimation: null,
             badEstimationMotives: {
-                longSolution: 'Долгое решение проблемы специалистом ИТ',
-                slowSpeed: 'Медленная скорость реакция на заявку',
-                roughHandling: 'Грубое общение тех. Специалиста',
+                slowSpeed: 'Скорость решения проблемы',
+                badCommunication: 'Неэффективная коммуникация ИТ специалиста',
                 problemNotSolved: 'Проблема не решена',
                 other: 'Свой вариант'
             },
             whyBad: [],
             comment: '',
             labels: {
-                title: 'Пожалуйста, отметьте моменты, которые вас не устроили:',
-                textareaPlaceholder: 'Опишите вашу проблему более подробно',
+                title: 'Пожалуйста уточните причину негативной оценки:',
+                textareaPlaceholder: 'Развернутый комментарий',
                 whyBad: 'Выберите причину вашей оценки:',
                 send: 'Отправить',
                 response: 'спасибо за оценку!',
