@@ -1,16 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+<!-- Скопируйте код ниже и вставьте его в шаблон уведомления-->
+
+<!-- Код шаблона-->
 <table style="width: 100%; font-family: Tahoma, sans-serif;">
     <tr>
         <td>
-            <table  style="width: 100%; max-width: 500px; margin: 1em auto;">
+            <table  style="width: 100%; max-width: 500px; margin: 0 auto;">
                 <tr>
                     <td>
                         <p>Здравствуйте, ##ticket.authors##<br />
-                            Ваше обращение: ##ticket.id## выполнено<br />Тема обращения: ##ticket.title##</p>
-                        <p>Ваша заявка закрыта.</p>
-                        <p>Комментарии специалиста ниже:</p>
-                        <p>Автор: ##ticket.lastupdater##</p>
+                            Ваше обращение: ##ticket.id## выполнено<br />
+                            Тема обращения: ##ticket.title##</p>
+                        <p>Ваша заявка <a href="##ticket.url##">закрыта</a>.</p>
+                        <p>Комментарии специалиста:</p>
                         <p>##ticket.solution.description##</p>
-                        <p>Просьба оценить качество предоставленного сервиса, каждая оценка важна для нас:</p>
+                        <p>Ваша оценка очень важна для нас:</p>
                     </td>
                 </tr>
             </table>
@@ -19,20 +33,32 @@
     </tr>
     <tr>
         <td>
-            <table style="width: 95%; max-width: 960px; margin: 1em auto;">
+            <table style="width: 100%; max-width: 500px; margin: 0 auto;">
                 <tr style="margin: 1em">
-                    <td align="right">
+                    <td>
                         <a target="_blank" style="width: 300px; height: 50px; margin: 1em auto; background: #00A000; color: #fff;
             padding: 0.5em
             1em; text-decoration: none; text-align: center;"
                            href="https://helpdesk.advmoscow.ru/plugins/estimation/add/?estimation=1&ticket=##ticket.id##">
                             Хорошо</a>
-                    </td>
-                    <td><a target="_blank" style="width: 300px; height: 50px; margin: 1em auto; background: #ff0000; color: #fff;
+                        <a target="_blank" style="width: 300px; height: 50px; margin: 1em auto; background: #ff0000; color: #fff;
         padding: 0.5em
             1em; text-decoration: none; text-align: center"
                            href="https://helpdesk.advmoscow.ru/plugins/estimation/add/?estimation=0&ticket=##ticket.id##">
-                        Плохо</a></td>
+                            Плохо</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table style="width: 100%; max-width: 500px; margin: 0 auto;">
+                <tr>
+                    <td>
+                        <p>Просьба не отвечать на данное письмо если ваша заявка выполнена корректно.</p>
+                            <p>Если ваша заявка не выполнена, сообщите нам обратным письмом.</p>
+                    </td>
                 </tr>
             </table>
         </td>
@@ -40,7 +66,7 @@
     <tr>
         <td>
 
-            <table style="width: 100%; max-width: 500px; margin: 1em auto;">
+            <table style="width: 100%; max-width: 500px; margin: 0 auto;">
                 <tr>
                     <td>
 
@@ -58,3 +84,9 @@
         </td>
     </tr>
 </table>
+<!-- Конец кода шаблона-->
+
+
+
+</body>
+</html>
