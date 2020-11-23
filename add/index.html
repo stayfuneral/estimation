@@ -13,11 +13,17 @@
 
 <div class="container mt-3 mb-3" id="app">
 
+    <div class="row mb-3">
+        <div class="col-4 mx-auto">
+            <img src="../front/logo.png" alt="" class="img-fluid mx-auto">
+        </div>
+    </div>
+
     <template v-if="estimation === 0">
 
-        <div class="row">
+        <div class="row mt-2">
             <div class="col-5 mx-auto">
-                <h4 class="text-center text-danger">{{labels.title}}</h4>
+                <h4 class="text-center text-danger mt-1 mb-2">{{labels.title}}</h4>
                 <div class="row">
                     <div v-for="(motive, key) in badEstimationMotives"
                          class="col-12 mt-1 alert alert-warning text-dark">
@@ -28,7 +34,7 @@
 
                     <div v-if="whyBad.includes('other')" class="col-12 mt-1 alert alert-warning">
                         <textarea v-model="comment" name="" id="comment" rows="3"
-                                  class="form-control alert alert-danger text-danger"
+                                  class="form-control alert alert-warning text-warning border border-warning"
                                   :placeholder="labels.textareaPlaceholder"></textarea>
                     </div>
 
