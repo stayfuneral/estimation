@@ -89,12 +89,10 @@ class PluginEstimationFacade
 
         switch ($this->request->estimation) {
             case true:
-                $response['comment'] = $this->estimationTicket->getTicketUser(1) .
-                    ', спасибо за оценку!';
+                $response['comment'] = 'Спасибо за оценку!';
                 break;
             case false:
-                $response['comment'] = $this->estimationTicket->getTicketUser(1) .
-                    ', нам очень жаль, что наши специалисты не оправдали ваших ожиданий, мы приложим усилия для исправления ситуации!';
+                $response['comment'] = 'Спасибо за обратную связь! Ваша оценка поможет сделать ИТ сервис лучше';
                 break;
         }
 
