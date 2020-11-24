@@ -38,7 +38,6 @@ class PluginEstimationCron extends CommonDBTM
         $pluginTicket = new PluginEstimationTicket;
         $date = new DateTime();
 
-//        $closeDateCurrentDay = $date->format('Y-m-d');
         $closeDateYesterday = $date->sub(new DateInterval('P1D'))->format('Y-m-d');
         $closeDateBeforeYesterday = $date->sub(new DateInterval('P2D'))->format('Y-m-d');
 
@@ -89,11 +88,6 @@ class PluginEstimationCron extends CommonDBTM
 
 
         }
-
-        $logFile = __DIR__ . '/../log/cron_' . date('dmy_His') . '.php';
-        $content = '<?php'.PHP_EOL.'return '.var_export($result, true).';';
-
-        file_put_contents($logFile, $content, FILE_APPEND);
 
         return $result;
     }
