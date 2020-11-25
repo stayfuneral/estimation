@@ -98,7 +98,11 @@ window.onload = function () {
 
                 request.then(response => {
 
-                    if(response.result === 'success' || response.result === 'duplicate') {
+                    if(
+                        response.result === 'success' ||
+                        response.result === 'duplicate' ||
+                        response.result === 'error'
+                    ) {
                         this.send = true;
                         this.labels.responseComment = response.comment
                     }
