@@ -59,13 +59,12 @@ class PluginEstimationEstimation extends CommonDBTM
      */
     public function checkEstimationByTicket($ticketId)
     {
-        $result = false;
         foreach ($this->find(['ticket_id' => $ticketId]) as $item) {
             if(!is_null($item)) {
-                $result = $item;
+                return $item;
             }
         }
-        return $result;
+        return false;
     }
 
     /**
