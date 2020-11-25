@@ -42,40 +42,6 @@ class PluginEstimationFacade
         echo json_encode($response, JSON_UNESCAPED_UNICODE);
     }
 
-    public function checkEstimation()
-    {
-        $checkEstimation = $this->estimation->checkEstimationByTicket($this->request->ticketId);
-        $author = $this->estimationTicket->getTicketUser(1);
-
-        $ticketId = (int) $this->request->ticketId;
-
-        $response = [];
-
-        if(!$checkEstimation) {
-            return [
-                'result' => 'empty',
-                'data' => $this->estimationTicket->getPrintableData()
-            ];
-        }
-
-        $response['data'] = $this->estimation->getPrintableDataById($ticketId);
-
-        $isAuto = (bool) $checkEstimation['is_auto'];
-
-        switch ($isAuto) {
-            case true:
-                $response['result'] = 'auto';
-                $response['comment'] = $author.', по Вашей заявке уже поставлена оценка';
-                break;
-            case false:
-                $response['result'] = 'found';
-                $response['comment'] = $author. ', Вы уже ставили оценку по данной заявке!';
-                break;
-        }
-
-        return $response;
-    }
-
     public function addEstimation()
     {
         $response = [];
